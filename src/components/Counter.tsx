@@ -4,19 +4,19 @@ interface ICounterState {
     counter: number
 }
 
-export class Counter extends Component {
-    state: ICounterState = {
+export class Counter extends Component<{}, ICounterState> {
+    state = {
         counter: 0
     }
 
     increment = () => {
-        this.setState((prevState: ICounterState) => ({
+        this.setState((prevState) => ({
             counter: prevState.counter - 1
         }))
     }
 
     decrement = () => {
-        this.setState((prevState: ICounterState) => ({
+        this.setState((prevState) => ({
             counter: prevState.counter + 1
         }))
     }
