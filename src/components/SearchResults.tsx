@@ -4,7 +4,7 @@ interface ISearchResults {
     searchText: string
 }
 
-class SearchResults extends PureComponent<ISearchResults> {
+export class SearchResults extends PureComponent<ISearchResults> {
 
     render() {
         return (
@@ -22,5 +22,3 @@ class SearchResults extends PureComponent<ISearchResults> {
         )
     }
 }
-
-export default SearchResults

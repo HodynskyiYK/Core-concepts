@@ -1,6 +1,6 @@
 import React, {FC} from 'react'
 
-const ToggleContent: FC = () => {
+export const ToggleContent: FC = () => {
 
     return (
         <>
@@ -16,5 +16,3 @@ const ToggleContent: FC = () => {
         </>
     )
 }
-
-export default ToggleContent

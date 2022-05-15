@@ -1,23 +1,23 @@
 import React, {Component} from 'react'
 
-type CounterState = {
+interface ICounterState {
     counter: number
 }
 
-class Counter extends Component {
-    state: CounterState = {
+export class Counter extends Component {
+    state: ICounterState = {
         counter: 0
     }
 
     increment = () => {
-        this.setState((prevState: CounterState) => ({
-            counter: --prevState.counter
+        this.setState((prevState: ICounterState) => ({
+            counter: prevState.counter - 1
         }))
     }
 
     decrement = () => {
-        this.setState((prevState: CounterState) => ({
-            counter: ++prevState.counter
+        this.setState((prevState: ICounterState) => ({
+            counter: prevState.counter + 1
         }))
     }
 
@@ -46,5 +46,3 @@ class Counter extends Component {
         )
     }
 }
-
-export default Counter

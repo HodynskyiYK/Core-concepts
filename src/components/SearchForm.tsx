@@ -1,7 +1,7 @@
 import React, {FC, FormEvent, useEffect, useState} from 'react'
-import SearchResults from './SearchResults'
+import {SearchResults} from './SearchResults'
 
-const SearchForm: FC = () => {
+export const SearchForm: FC = () => {
     const [value, setValue] = useState('')
     const [searchText, setSearchText] = useState('')
 
@@ -47,5 +47,3 @@ const SearchForm: FC = () => {
         </>
     )
 }
-
-export default SearchForm

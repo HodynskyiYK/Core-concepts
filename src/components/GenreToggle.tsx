@@ -1,11 +1,11 @@
 import React, {FC, useState} from 'react'
-import ToggleContent from './ToggleContent'
+import {ToggleContent} from './ToggleContent'
 
-const GenreToggle: FC = () => {
-    const [toggle, setToggle] = useState(false)
+export const GenreToggle: FC = () => {
+    const [toggle, setToggle] = useState<boolean>(false)
 
     const checkedHandler = () => {
-        setToggle(!toggle)
+        setToggle((prev: boolean) => !prev)
     }
 
     return (
@@ -26,5 +26,3 @@ const GenreToggle: FC = () => {
         </>
     )
 }
-
-export default GenreToggle

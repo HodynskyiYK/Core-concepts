@@ -4,7 +4,7 @@ interface IMainTitle {
     title: string
 }
 
-const MainTitle: FC<IMainTitle> = ({title}) => {
+export const MainTitle: FC<IMainTitle> = ({title}) => {
     const mainTitle = createElement(
         'h1',
         {className: 'main-title h1'},
@@ -17,5 +17,3 @@ const MainTitle: FC<IMainTitle> = ({title}) => {
         </>
     )
 }
-
-export default MainTitle
